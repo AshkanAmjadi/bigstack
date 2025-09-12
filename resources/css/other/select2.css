@@ -1,0 +1,46 @@
+.select2-container{
+    @apply !w-full
+}
+
+.select2-dropdown--below{
+    @apply DL rounded-md overflow-hidden border-0 shadow-custom
+ }
+.select2-dropdown{
+    @apply card_c
+}
+.select2-container--default .select2-selection--multiple{
+    @apply form-input;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice{
+    @apply !border-0 !mt-0 mb-1 btn shadow-md shadow-slate-200 dark:shadow-slate-500/60 hover:shadow-lg hover:shadow-slate-200 dark:hover:shadow-slate-700 bg-slate-500 text-slate-50 hover:bg-slate-400 inline-block rounded-md focus:shadow-none focus:bg-slate-600 focus:ring-2 focus:ring-slate-600 focus:ring-offset-2
+}
+.select2-selection__choice__remove{
+    @apply !border-0 h-full
+}
+.select2-container--default .select2-results__option--selected{
+    @apply bg-slate-200 dark:bg-slate-800
+}
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable{
+    @apply bg-slate-300 dark:bg-slate-700
+
+}
+.select2-results__option--selectable{
+    @apply inline rounded-md card text-mid font-semibold
+}
+.select2-results__options{
+    @apply p-2 py-3 flex gap-2 flex-wrap
+}
+
+.select2-search__field{
+    @apply form-input
+}
+
+.select2-container--default .select2-selection--single{
+
+    @apply form-input p-2 !h-auto
+}
+.select2-selection__rendered{
+    @apply dark:!text-slate-300 text-smid
+}

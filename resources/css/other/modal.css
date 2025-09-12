@@ -1,0 +1,25 @@
+.modal{
+    @apply fixed z-40 w-full h-full top-0 right-0 bg-slate-800 bg-opacity-50 dark:bg-slate-900 dark:bg-opacity-80 overflow-y-auto;
+}
+
+.modal-content{
+    @apply mb-10
+}
+.modal-content.hasMax{
+    @apply max-h-[calc(90%)] mb-10 overflow-y-auto fsm:max-h-[calc(80%)]
+}
+.modal-content.tiny{
+    @apply w-100 fsm:w-90p
+}
+.modal-content.medium{
+    @apply w-200 lg:w-90p;
+
+}
+.modal-content.larg{
+    @apply w-300 xl:w-90p;
+}
+.modal-content.fullScreen{
+    @apply w-full h-full;
+}
+
+

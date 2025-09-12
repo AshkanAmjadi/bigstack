@@ -1,0 +1,49 @@
+.dropdown,
+.tooltip{
+    @apply absolute py-2 px-3 rounded-md z-40 w-max max-w-[320px] !m-0 opacity-0 pointer-events-none
+}
+.dropdown[data-show],
+.tooltip[data-show]{
+    @apply opacity-100 pointer-events-auto
+}
+/*.dropdown{*/
+/*    @apply left-0 top-0*/
+/*}*/
+
+
+
+
+.tooltipArrow,
+.tooltipArrow::before {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: inherit;
+}
+
+.tooltipArrow {
+    visibility: hidden;
+}
+
+.tooltipArrow::before {
+    visibility: visible;
+    content: '';
+    right: 0;
+    top: 0;
+    transform: rotate(45deg);
+}
+.tooltip[data-popper-placement^='top'] > .tooltipArrow {
+    bottom: -4px;
+}
+
+.tooltip[data-popper-placement^='bottom'] > .tooltipArrow {
+    top: -4px;
+}
+
+.tooltip[data-popper-placement^='left'] > .tooltipArrow {
+    right: -4px;
+}
+
+.tooltip[data-popper-placement^='right'] > .tooltipArrow {
+    left: -4px;
+}

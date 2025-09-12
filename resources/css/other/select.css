@@ -1,0 +1,23 @@
+.vscomp-toggle-button,.vscomp-dropbox{
+    @apply bg-transparent
+}
+.pop-comp-wrapper{
+    @apply rounded-xl shadow-md shadow-slate-950/30 overflow-hidden
+}
+.vscomp-option.selected,
+.vscomp-option.focused{
+    @apply dark:bg-slate-800 dark:text-white
+}
+
+.vscomp-dropbox-container-6329,
+.vscomp-dropbox{
+    @apply bg-slate-100 dark:bg-slate-800 dark:text-white rounded-lg
+}
+
+.vscomp-arrow::after {
+    @apply dark:border-b-white dark:border-r-white
+}
+
+.vscomp-value{
+    @apply dark:text-slate-100
+}

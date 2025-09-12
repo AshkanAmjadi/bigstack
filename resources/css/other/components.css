@@ -1,0 +1,345 @@
+
+
+.bg-slate-100{
+
+    @apply dark:bg-slate-800 dark:text-slate-100;
+
+}
+.DL-I{
+    @apply bg-white dark:bg-zinc-950
+}
+.DL{
+    @apply bg-white dark:bg-zinc-900
+}
+.DLL{
+    @apply bg-zinc-100 dark:bg-zinc-800
+}
+.DLLL{
+    @apply bg-zinc-200 dark:!bg-zinc-800
+}
+.DLLLL{
+    @apply bg-zinc-200 dark:bg-zinc-700
+}
+
+.text-slate-700{
+
+    @apply dark:text-slate-100;
+
+}
+.text-slate-600{
+
+    @apply dark:text-slate-200;
+
+}
+.fill-slate-700{
+
+    @apply dark:fill-slate-100;
+
+}
+.ring-slate-600{
+
+    @apply dark:ring-slate-500 dark:border-slate-400;
+
+}
+.border-slate-300{
+
+    @apply dark:border-slate-500;
+
+}
+
+
+/*dropdown*/
+.hasList{
+    @apply relative;
+}
+.hasList > .list{
+    @apply  p-0 cart bg-white space-y-2 py-2 !absolute translate-y-0 scale-100 !duration-100
+}
+.hasList > .list > .link{
+    @apply mx-2 p-3 text-slate-700 flex items-center hover:bg-slate-200 font-medium trans dark:hover:bg-slate-600 rounded-lg [&>.icon]:ml-2 relative cursor-pointer
+}
+.hasList > .list > link .extra{
+    @apply absolute h-full flex items-center left-3
+}
+
+.hasList > .list.hide{
+    @apply none-show translate-y-4 scale-95
+}
+
+
+.noVisible{
+    @apply none-show scale-95
+}
+
+/*cart*/
+.filters.hide{
+    @apply opacity-0 pointer-events-none scale-95
+}
+.filters.show{
+    @apply pointer-events-auto opacity-100 scale-100
+}
+
+/*cart*/
+.form-input,
+label.box,
+.form-file,
+.card,
+.cart{
+
+    @apply rounded-lg bg-zinc-50 border border-zinc-300 dark:bg-zinc-950 relative trans;
+
+}
+
+/*input*/
+
+input{
+    @apply placeholder:transition-all placeholder:pr-0 outline-none
+}
+input:focus{
+    @apply placeholder:pr-2 placeholder:text-slate-500 dark:placeholder:text-slate-200
+}
+/*divider*/
+.divider-1,
+.divider{
+    @apply relative border-y border-zinc-300 w-full;
+}
+.divider-1{
+    @apply border-b-0;
+}
+
+/*icon*/
+svg.icon{
+    @apply h-6 w-6 md:h-5 md:w-5
+}
+img.icon{
+    @apply w-5 h-5 md:w-4 md:h-4
+}
+
+/*content*/
+#content{
+    direction: rtl;
+}
+
+@layer components {
+    .progress-wraper,
+    .progress{
+
+        @apply relative
+
+    }
+}
+
+.shadow-custom {
+    @apply shadow-[0_0_20px_3px] shadow-slate-600/30 dark:shadow-slate-950/50
+}
+.shadow-custom_gray {
+    @apply shadow-[0_0_20px_4px] !shadow-gray-500/30 dark:!shadow-gray-950/50
+}
+.shadow-custom_gray_sm {
+    @apply !shadow-[0_0_12px_3px] !shadow-gray-500/20 dark:!shadow-gray-950/50
+}
+
+.shadow-dark{
+    @apply shadow-[0_0_20px_3px] shadow-slate-500/10 dark:shadow-slate-950/40
+}
+
+.card_c{
+    @apply DL shadow-dark rounded-xl
+}
+.card_cw{
+    @apply DLL shadow-dark rounded-xl
+}
+.card_cwc{
+    @apply DLLL rounded-md
+}
+
+
+.hoverEffect{
+    @apply hover:bg-slate-200 dark:hover:bg-slate-700
+}
+
+.haveDrop{
+    @apply cursor-pointer
+}
+
+.haveDrop .drop{
+    @apply  opacity-0 pointer-events-none scale-95 translate-y-2
+
+}
+.haveDrop:focus .drop{
+    @apply opacity-100 pointer-events-auto scale-100 translate-y-0
+}
+
+
+.box-list .box-item{
+
+}
+
+.fill-default{
+    @apply fill-slate-800 dark:fill-slate-100
+}
+
+.tex-default{
+    @apply text-slate-800 dark:text-slate-100
+}
+
+.back-image-default{
+    @apply bg-no-repeat bg-clip-border bg-center bg-cover
+}
+
+
+.img-fsm,
+.img-fsm img,
+.icon-fsm > svg,
+.icon-fsm{
+    @apply  w-4.5 h-4.5 md:w-4 md:h-4
+}
+
+.img-sm,
+.img-sm img,
+.icon-sm > svg,
+.icon-sm{
+    @apply  w-6 h-6 md:w-5 md:h-5
+}
+
+
+.img-md,
+.img-md img,
+.icon-md > svg,
+.icon-md{
+    @apply  w-7 h-7 md:!w-5.5 md:!h-5.5
+}
+
+.img-lg,
+.img-lg img,
+.icon-lg > svg,
+.icon-lg{
+   @apply  w-9 h-9 md:!w-7 md:!h-7
+}
+
+.img-xl,
+.img-xl img,
+.icon-xl > svg,
+.icon-xl{
+   @apply  w-12 h-12 md:w-10 md:h-10
+}
+
+.img-mxl,
+.img-mxl img,
+.icon-mxl > svg,
+.icon-mxl{
+   @apply  w-16 h-16 md:w-12 md:h-12
+}
+
+.img-2xl,
+.img-2xl img,
+.icon-2xl > svg,
+.icon-2xl{
+   @apply  w-20 h-20 md:w-16 md:h-16
+}
+.img-2xl-land,
+.img-2xl-land img,
+.icon-2xl-land > svg,
+.icon-2xl-land{
+   @apply  max-w-none h-20  md:h-16
+}
+
+.img-4xl,
+.img-4xl img,
+.icon-4xl > svg,
+.icon-4xl{
+   @apply  w-40 h-40 md:w-32 md:h-32
+}
+
+
+
+
+
+.shiar{
+    @apply ring-4 ring-slate-500 ring-offset-2 dark:ring-offset-slate-800
+}
+.flexBC{
+    @apply flex flex-wrap justify-between items-center
+}
+.flexB{
+    @apply flex flex-wrap justify-between
+}
+.flexC{
+    @apply flex flex-wrap items-center
+}
+.flexCC{
+    @apply flex flex-wrap items-center justify-center
+}
+
+.fullPage{
+    @apply fixed w-[100vw] h-[100vh] left-0 top-0
+}
+
+.redGlass{
+    @apply bg-red-900 backdrop-filter backdrop-blur-sm bg-opacity-10
+}
+.blueGlass{
+    @apply bg-blue-900 backdrop-filter backdrop-blur-sm bg-opacity-10
+}
+
+.glass{
+
+    border: 1px solid rgba( 255, 255, 255, 0.28 );
+    /*background-image: url(data:image/png;base64,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);*/
+    /*background-blend-mode: darken;*/
+
+}
+
+
+.glass{
+    @apply backdrop-blur-[120px] bg-blue-300/20  dark:bg-gray-900/10
+}
+.textShPurple{
+    text-shadow: 0px 3px 13px rgba(113,19,220,0.78);
+}
+.bdb{
+    @apply border-b border-slate-700 dark:border-slate-200
+}
+.bdl{
+    @apply border-l border-slate-700 dark:border-slate-200
+}
+.bdt{
+    @apply border-t border-slate-700 dark:border-slate-200
+}
+.breadcrumb_item,
+.blueHover,
+.amberHover,
+.indigoHover,
+.indicator{
+    @apply transition-all duration-300 ease-linear
+}
+.breadcrumb_item:hover,
+.blueHover:hover{
+    @apply !bg-blue-500 !text-white
+}
+.indigoHover:hover{
+    @apply !bg-indigo-500 !text-white
+}
+.amberHover:hover{
+    @apply !bg-amber-500 !text-white
+}
+.blueHover:hover .indicator,
+.amberHover:hover .indicator,
+.indigoHover:hover .indicator{
+    @apply bg-white
+}
+.blueHover:hover svg,
+.amberHover:hover svg,
+.indigoHover:hover svg{
+    @apply !text-white transition-all duration-300 ease-linear
+}
+
+.topToCenter {
+    @apply top-1/2 translate-y-1/2-
+}
+
+
+
+.allert{
+    @apply transall
+}

@@ -1,0 +1,64 @@
+@keyframes openEl {
+
+    0%{
+        opacity: 0;
+        transform: translateY(10px) scale(.9);
+    }
+
+    60%{
+        opacity: 1;
+        transform: translateY(-10px) scale(1);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+@keyframes closeEl {
+
+    100%{
+        opacity: 0;
+        transform: translateY(-10px) scale(.9);
+    }
+
+    30%{
+        opacity: 1;
+        transform: translateY(10px) scale(1);
+    }
+    0%{
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+.ElIn{
+    animation: openEl 500ms ease both;
+}
+.ElOut{
+    animation: closeEl 500ms ease both;
+
+}
+
+@keyframes animation {
+    0% {
+        stroke-dasharray: 1 98;
+        stroke-dashoffset: -105;
+    }
+    50% {
+        stroke-dasharray: 80 10;
+        stroke-dashoffset: -160;
+    }
+    100% {
+        stroke-dasharray: 1 98;
+        stroke-dashoffset: -300;
+    }
+}
+
+#spinner_loading {
+    transform-origin: center;
+    animation-name: animation;
+    animation-duration: 1.2s;
+    animation-timing-function: cubic-bezier;
+    animation-iteration-count: infinite;
+}

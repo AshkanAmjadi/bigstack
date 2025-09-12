@@ -1,0 +1,17 @@
+
+.dataTable-pagination li.active{
+    @apply shadow-md shadow-sky-200 dark:shadow-sky-500/60 hover:shadow-lg hover:shadow-sky-200 dark:hover:shadow-sky-700 bg-sky-500 dark:bg-sky-500 text-slate-50 hover:bg-sky-400
+}
+.dataTable-selector{
+    @apply dark:bg-slate-800 ml-3 rounded-md
+}
+.dataTable-pagination li{
+    @apply mx-1 mb-2
+}
+
+.dataTable-selector,
+.dataTable-input{
+    @apply form-input mb-2
+}
+
+

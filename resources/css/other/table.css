@@ -1,0 +1,52 @@
+table{
+
+}
+
+
+table {
+    @apply table-auto
+}
+table th,
+table td{
+    @apply px-6 py-5 md:px-4 md:py-3
+}
+.table-style-base tr{
+    @apply border-b border-slate-300
+}
+.table-style-line td{
+   @apply border border-slate-300
+}
+.table-style-base.zebra tbody tr{
+    @apply odd:bg-slate-100 dark:odd:bg-slate-800
+}
+
+.table-style-base tbody tr:last-child{
+    @apply border-none
+}
+.table-style-normal,
+.table-style-shadow-tdw,
+.table-style-shadow-td,
+.table-style-shadow{
+    border-collapse: separate;
+    @apply border-spacing-y-4 md:border-spacing-y-2
+
+}
+.table-style-normal,
+.table-style-shadow-tdw,
+.table-style-shadow-td{
+    @apply border-spacing-x-4 md:border-spacing-x-2
+}
+
+
+.table-style-shadow-td tbody td,
+.table-style-shadow tbody tr{
+    @apply shadow-custom card_c rounded-md
+}
+.table-style-shadow-tdw tbody td{
+    @apply shadow-custom_gray_sm card_cw !rounded-md
+}
+
+
+.table-style-base.hover tr{
+    @apply hover:bg-slate-100 dark:hover:bg-slate-800
+}

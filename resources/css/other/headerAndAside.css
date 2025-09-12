@@ -1,0 +1,227 @@
+/*HEADER*/
+
+#content,
+#header{
+    @apply pr-72
+}
+
+
+/*ASIDE*/
+body > #aside{
+    @apply trans w-72
+}
+body > #aside.expanded{
+    @apply  trans
+}
+body > #aside .cursor.active > div > div{
+    @apply block
+}
+
+
+body > #aside nav{
+    direction: ltr;
+}
+body > #aside nav *{
+    direction: rtl;
+}
+
+
+
+
+
+/*listItem*/
+#navList .listItem{
+
+    @apply flex items-center p-3 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-600 trans cursor-pointer text-slate-700 relative;
+
+}
+body > #aside.expanded #navList .listItem .extra{
+    @apply absolute h-full flex items-center left-3
+}
+#navList .listItem.active{
+    @apply bg-blue-500 text-white hover:bg-blue-500 shadow-[0_0px_20px_-8px_rgba(0,0,0,0.3)] shadow-blue-500
+}
+
+/*menuList.open*/
+body > #aside.expanded #navList .menuList.open{
+
+    @apply bg-white dark:bg-slate-900 ring-1 ring-slate-300 dark:ring-slate-500 rounded-lg space-y-2 space-y-reverse;
+
+}
+body > #aside.expanded #navList .menuList.open > .head{
+
+    @apply hover:bg-transparent;
+
+}
+body > #aside.expanded #navList .menuList.open > ul{
+
+    @apply h-auto last:pb-2 space-y-2;
+
+}
+body > #aside.expanded #navList .menuList.open > .listItem{
+
+    @apply mb-2;
+
+}
+/*subMenuList.open*/
+body > #aside.expanded #navList .menuList .subMenuList.open{
+
+    @apply bg-slate-100 dark:bg-slate-800 ring-1 ring-slate-300 dark:ring-slate-500 rounded-lg space-y-2 space-y-reverse;
+
+}
+body > #aside.expanded #navList .menuList .subMenuList.open > .head{
+
+    @apply hover:bg-transparent;
+
+
+}
+body > #aside.expanded #navList .menuList .subMenuList.open > ul{
+
+    @apply h-auto last:pb-2 space-y-2 !mb-0;
+
+}
+body > #aside.expanded #navList .menuList .subMenuList.open > .listItem{
+
+    @apply mb-2;
+
+}
+
+
+
+@screen lg {
+    body > #aside .cursor{
+        @apply hidden
+    }
+    #navList .listItem .extra{
+        @apply absolute h-full flex items-center left-3
+    }
+    #navList .menuList.open{
+
+        @apply bg-white dark:bg-slate-900 ring-1 ring-slate-300 dark:ring-slate-500 rounded-lg space-y-2 space-y-reverse;
+
+    }
+    #navList .menuList.open > .head{
+
+        @apply hover:bg-transparent;
+
+    }
+    #navList .menuList.open > ul{
+
+        @apply h-auto last:pb-2 space-y-2;
+
+    }
+    #navList .menuList.open > .listItem{
+
+        @apply mb-2;
+
+    }
+    /*subMenuList.open*/
+    #navList .menuList .subMenuList.open{
+
+        @apply bg-slate-100 dark:bg-slate-800 ring-1 ring-slate-300 dark:ring-slate-500 rounded-lg space-y-2 space-y-reverse;
+
+    }
+    #navList .menuList .subMenuList.open > .head{
+
+        @apply hover:bg-transparent;
+
+
+    }
+    #navList .menuList .subMenuList.open > ul{
+
+        @apply h-auto last:pb-2 space-y-2 !mb-0;
+
+    }
+    #navList .menuList .subMenuList.open > .listItem{
+
+        @apply mb-2;
+
+    }
+
+    #header,
+    #content,
+    #header #mainsearch{
+        @apply px-3
+    }
+
+
+    #aside.hide{
+        @apply -right-72
+    }
+    body > #aside{
+        @apply w-60
+    }
+}
+@screen lg-r {
+    body > #aside .close{
+        @apply hidden
+    }
+    #header.mini,
+    #content.mini,
+    #header.mini #mainsearch{
+        @apply pr-24
+    }
+
+
+    body > #aside.mini{
+        @apply w-24 !overflow-y-hidden
+    }
+    body > #aside.mini .cursor {
+        @apply hidden w-0
+    }
+    body > #aside.mini .logo {
+        @apply  w-full
+    }
+    /*list*/
+    body > #aside.mini .listItems{
+
+        @apply !h-0;
+
+    }
+    /*listItem*/
+    body > #aside.mini .divider .title{
+        @apply hidden
+    }
+    body > #aside.mini .listItem .extra,
+    body > #aside.mini .listItem .name{
+
+        @apply !hidden;
+
+    }
+    body > #aside.mini .listItem{
+
+        @apply justify-center;
+
+    }
+    /*menuList.open*/
+    body > #aside.mini #navList .menuList.active > .head{
+
+        @apply bg-slate-200 dark:bg-slate-600;
+
+    }
+}
+
+body > #aside .listItem > .icon svg{
+    @apply dark:fill-white fill-slate-700
+}
+
+body > #aside .listItem.active > .icon svg{
+    @apply fill-white
+}
+
+
+
+
+body #sidebar{
+    @apply translate-y-0 ease-out
+}
+body #sidebarOverley.hide{
+    @apply none-show
+}
+body #sidebar.left-0.hide{
+    @apply none-show -translate-x-1/4 scale-95
+}
+body #sidebar.right-0.hide{
+    @apply none-show translate-x-1/4 scale-95
+}
+

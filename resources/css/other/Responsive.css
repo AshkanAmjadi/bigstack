@@ -1,0 +1,71 @@
+.mainContainer{
+    @apply px-20
+    xl:px-10
+    sm:px-3
+}
+.mainArticle{
+    @apply px-40
+        2xl:px-32
+    xl:px-10
+    sm:px-3
+}
+
+.container{
+    width: 1650px;
+    margin: 0 auto;
+}
+.CB:after,
+.container.after:after{
+    content: ' ';
+    clear: both;
+    display: block;
+}
+
+
+@media only screen and (max-width: 1800px) {
+    .container{
+        width: 1350px;
+    }
+}
+
+@media only screen and (max-width: 1650px) {
+    .container{
+        width: 1330px;
+    }
+}
+
+@media only screen and (max-width: 1350px) {
+    .container{
+        width: 1030px;
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    .container{
+        width: 760px;
+    }
+}
+
+@media only screen and (max-width: 770px) {
+    .container{
+        width: 90%;
+        padding: 0 6px;
+    }
+
+}
+
+@media only screen and (max-width: 580px) {
+    .container{
+        width: 93%;
+    }
+
+}
+
+@media only screen and (max-width: 420px) {
+    .container{
+        width: 94%;
+        padding: 0 8px;
+    }
+
+}
+

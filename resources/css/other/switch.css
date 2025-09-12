@@ -1,0 +1,102 @@
+/*switch*/
+
+.switchWraper .switch {
+    @apply  rounded-full overflow-hidden h-6 w-12 p-1
+}
+
+.switchWraper .switch .toop {
+    @apply h-4 w-4 bg-white rounded-full shadow-md shadow-slate-500/40 right-0
+}
+
+.switchWraper .switch.square {
+    @apply rounded-md
+}
+
+.switchWraper .switch.square .toop {
+    @apply rounded-sm
+}
+
+.switchWraper .switch .select {
+    @apply left-full-plus-4 opacity-0 top-1/2
+}
+
+.switchWraper .switch .deselect {
+    @apply right-1/2 opacity-100 top-1/2
+}
+
+.switchWraper .switch .select svg,
+.switchWraper .switch .deselect svg {
+    @apply h-4 w-4 text-slate-500 dark:text-white
+}
+
+
+.switchWraper .switch .select svg {
+    @apply text-white
+}
+
+
+
+.switchWraper input:not(:checked) + label .switch.bgAnimate  {
+    @apply bg-slate-200 dark:bg-slate-700
+}
+
+.switchWraper input:checked + label .switch .toop {
+    @apply right-full translate-x-full
+}
+
+.switchWraper input:checked + label .switch .select {
+    @apply left-1/2 opacity-100
+
+}
+
+.switchWraper input:checked + label .switch .deselect {
+    @apply right-full-plus-4 opacity-0
+
+}
+
+.switchWraper input:disabled + label{
+    @apply opacity-50
+
+}
+
+
+
+.switchWraper .switch.sm {
+    @apply   h-5 w-10
+}
+
+.switchWraper .switch.sm .toop {
+    @apply h-3 w-3
+}
+
+.switchWraper .switch.sm .select svg,
+.switchWraper .switch.sm .deselect svg {
+    @apply h-3 w-3
+}
+
+
+.switchWraper .switch.lg {
+    @apply   h-7 w-14
+}
+
+.switchWraper .switch.lg .toop {
+    @apply h-5 w-5
+}
+
+.switchWraper .switch.lg .select svg,
+.switchWraper .switch.lg .deselect svg {
+    @apply h-4 w-4 mt-0.5
+}
+
+
+
+
+.switchWraper .switch.valid {
+    @apply ring-2 ring-emerald-500
+}
+
+
+.switchWraper .switch.invalid {
+    @apply ring-2 ring-red-500
+}
+

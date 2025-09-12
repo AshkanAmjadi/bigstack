@@ -1,0 +1,25 @@
+.ce-popover,
+.tc-popover__item-icon,
+.tc-popover{
+    @apply card_c
+}
+.codex-editor{
+    @apply z-[2]
+}
+.ce-popover {
+    @apply left-[unset] right-[5px]
+}
+
+.ce-popover-item__title{
+    @apply dark:text-slate-100
+}
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn{
+    @apply dark:text-slate-100 dark:hover:text-slate-800 md:dark:bg-slate-800
+}
+.ce-inline-tool-input{
+    @apply dark:bg-slate-800
+}
+.ce-toolbar__actions{
+    @apply right-[unset] left-[90%]
+}

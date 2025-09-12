@@ -1,0 +1,7 @@
+.editor-toolbar button.active, .editor-toolbar button:hover {
+    @apply dark:text-slate-800
+}
+.ce-block i {
+    font-style: normal !important;
+}
+

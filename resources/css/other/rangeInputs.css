@@ -1,0 +1,25 @@
+
+
+input[type="range"].form-range {
+    @apply appearance-none w-full h-2 rounded-full bg-slate-500
+}
+input[type="range"].form-range:disabled {
+    @apply opacity-50
+}
+input[type=range].form-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+    @apply bg-blue-500
+
+}
+input[type=range].form-range::-webkit-slider-thumb:hover {
+    @apply border-2 border-blue-500 bg-white dark:bg-slate-800
+}
+input[type=range].form-range::-webkit-slider-thumb:active {
+    transform: scale(1.3);
+}

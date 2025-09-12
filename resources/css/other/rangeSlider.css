@@ -1,0 +1,11 @@
+.noUi-handle{
+    @apply border-2 border-slate-500
+}
+
+.noUi-target{
+    @apply border-none bg-slate-400/20
+}
+
+.noUi-connect{
+    @apply bg-slate-500
+}

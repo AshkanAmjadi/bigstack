@@ -1,0 +1,809 @@
+<!doctype html>
+<html id="html" lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>tailwind</title>
+</head>
+<body class="font-YekanBakh bg-slate-100 text-slate-700 font-medium">
+<header id="header"
+        class="mini w-full h-16 border-b border-slate-300 flex flex-row-reverse items-center px-5 space-x-5 fixed top-0 z-20 lg:space-x-3 text-slate-700 bg-slate-100">
+    <div class="profile hasList">
+        <div class="user dropBtn cursor-pointer"
+             onclick="openList(this)">
+            <img class="pointer-events-none" src="img/default.png" alt="img/default.png">
+        </div>
+        <ul class="list hidden left-0 top-10 w-72 flex flex-col">
+            <li class="link">
+                <div class="user dropBtn ml-3">
+                    <img class="pointer-events-none" src="img/default.png" alt="img/default.png">
+                </div>
+                <div>
+                    <div class="name font-bold">اشکان امجدی</div>
+                    <div class="permission font-semibold">مدیر</div>
+                </div>
+            </li>
+
+            <li class="link">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.75"
+                         stroke="currentColor" class="">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/>
+                    </svg>
+
+
+                </div>
+                <p>پروفایل</p>
+            </li>
+            <li class="link">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                         stroke="currentColor" class="">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    </svg>
+
+
+                </div>
+                <p>تنظیمات</p>
+            </li>
+            <li class="link">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                         stroke="currentColor" class="">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z"/>
+                    </svg>
+
+
+                </div>
+                <p>صورتحساب</p>
+            </li>
+
+            <div class="divider ">
+
+            </div>
+
+            <li class="link">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                         stroke="currentColor" class="">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/>
+                    </svg>
+
+
+                </div>
+                <p>راهنمایی</p>
+                <div class="extra">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                         stroke="currentColor" class="">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M16.5 8.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v8.25A2.25 2.25 0 006 16.5h2.25m8.25-8.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-7.5A2.25 2.25 0 018.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 00-2.25 2.25v6"/>
+                    </svg>
+                </div>
+            </li>
+            <li class="link">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                         stroke="currentColor" class="">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z"/>
+                    </svg>
+
+
+                </div>
+                <p>سولات متداول</p>
+            </li>
+            <li class="link">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                         stroke="currentColor" class="">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+
+
+                </div>
+                <p>قیمت گذاری</p>
+            </li>
+
+            <div class="divider ">
+
+            </div>
+            <li class="px-3 py-2">
+                <button class="btn w-full shadow-md shadow-red-200 dark:shadow-red-500/60 hover:shadow-lg hover:shadow-red-200 dark:hover:shadow-red-700 bg-red-500 text-slate-50 hover:bg-red-400 inline-block rounded-md focus:shadow-none focus:bg-red-600 focus:ring-2 focus:ring-red-600 focus:ring-offset-2">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                            <path fill-rule="evenodd"
+                                  d="M10 2a.75.75 0 01.75.75v7.5a.75.75 0 01-1.5 0v-7.5A.75.75 0 0110 2zM5.404 4.343a.75.75 0 010 1.06 6.5 6.5 0 109.192 0 .75.75 0 111.06-1.06 8 8 0 11-11.313 0 .75.75 0 011.06 0z"
+                                  clip-rule="evenodd"/>
+                        </svg>
+
+                    </div>
+                    <p>خروج</p>
+                </button>
+            </li>
+
+
+        </ul>
+    </div>
+    <div class="notification hasList">
+        <div class="dropBtn cursor-pointer" onclick="openList(this)">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                 stroke="currentColor" class=" pointer-events-none">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0M3.124 7.5A8.969 8.969 0 015.292 3m13.416 0a8.969 8.969 0 012.168 4.5"/>
+            </svg>
+        </div>
+
+        <div class="list hidden -left-8 top-10 w-72 overflow-hidden !pt-16">
+            <div class="header w-full h-16 absolute top-0 border-b border-slate-300 flex items-center justify-center justify-between px-6">
+
+                <h2 class="font-bold">اعلان ها</h2>
+                <button class="btn sm shadow-md shadow-sky-200 dark:shadow-sky-600 hover:shadow-lg hover:shadow-sky-200 dark:hover:shadow-sky-700 bg-sky-500 text-slate-50 hover:bg-sky-400 inline-block rounded-md focus:shadow-none focus:bg-sky-600 focus:ring-2 focus:ring-sky-600 focus:ring-offset-2">
+                    <p class="inline">
+                        مشاهده اعلان ها
+                    </p>
+                </button>
+            </div>
+
+            <ul class="max-h-96 overflow-y-auto flex flex-wrap">
+                <li class="w-full">
+                    یک نظر صبت شده
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    <div class="mode cursor-pointer" onclick="dark()">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+             class="sun  text-slate-700">
+            <path d="M10 2a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 0110 2zM10 15a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 0110 15zM10 7a3 3 0 100 6 3 3 0 000-6zM15.657 5.404a.75.75 0 10-1.06-1.06l-1.061 1.06a.75.75 0 001.06 1.06l1.06-1.06zM6.464 14.596a.75.75 0 10-1.06-1.06l-1.06 1.06a.75.75 0 001.06 1.06l1.06-1.06zM18 10a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0118 10zM5 10a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 015 10zM14.596 15.657a.75.75 0 001.06-1.06l-1.06-1.061a.75.75 0 10-1.06 1.06l1.06 1.06zM5.404 6.464a.75.75 0 001.06-1.06l-1.06-1.06a.75.75 0 10-1.061 1.06l1.06 1.06z"/>
+        </svg>
+
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+             class="moon hidden  text-slate-700">
+            <path fill-rule="evenodd"
+                  d="M7.455 2.004a.75.75 0 01.26.77 7 7 0 009.958 7.967.75.75 0 011.067.853A8.5 8.5 0 116.647 1.921a.75.75 0 01.808.083z"
+                  clip-rule="evenodd"/>
+        </svg>
+
+
+    </div>
+    <div class="search flex items-center space-x-reverse space-x-1 w-full" onclick="openMainsearch()">
+        <label for="search" class="pr-4 lg:pr-0">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="fill-slate-700 ">
+                <path d="M0 0h24v24H0V0z" fill="none"/>
+                <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+            </svg>
+        </label>
+        <input id="search" class="w-full p-4 bg-slate-100 outline-none text-smid font-medium lg:hidden" type="text"
+               placeholder="جستوجو  ...">
+    </div>
+    <div class="openMenu lg-r:hidden" onclick="openMenu()">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+            <path d="M17 2.75a.75.75 0 00-1.5 0v5.5a.75.75 0 001.5 0v-5.5zM17 15.75a.75.75 0 00-1.5 0v1.5a.75.75 0 001.5 0v-1.5zM3.75 15a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5a.75.75 0 01.75-.75zM4.5 2.75a.75.75 0 00-1.5 0v5.5a.75.75 0 001.5 0v-5.5zM10 11a.75.75 0 01.75.75v5.5a.75.75 0 01-1.5 0v-5.5A.75.75 0 0110 11zM10.75 2.75a.75.75 0 00-1.5 0v1.5a.75.75 0 001.5 0v-1.5zM10 6a2 2 0 100 4 2 2 0 000-4zM3.75 10a2 2 0 100 4 2 2 0 000-4zM16.25 10a2 2 0 100 4 2 2 0 000-4z"/>
+        </svg>
+
+    </div>
+    <div id="mainsearch"
+         class="miansearch absolute w-full top-0 right-0 bg-slate-100 border-b border-slate-300 pr-72 hidden">
+        <form id="searchForm" action="#" class="w-full h-16 flex items-center relative">
+            <input class="w-full p-4 bg-slate-100 outline-none text-smid font-medium" type="text"
+                   placeholder="جستوجو  ..." onkeyup="searching(this)">
+            <div class="close absolute h-full w-16 left-0 flex items-center justify-center cursor-pointer"
+                 onclick="closeMainsearch()">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                     class="w-5 h-5 text-slate-700">
+                    <path fill-rule="evenodd"
+                          d="M7.793 2.232a.75.75 0 01-.025 1.06L3.622 7.25h10.003a5.375 5.375 0 010 10.75H10.75a.75.75 0 010-1.5h2.875a3.875 3.875 0 000-7.75H3.622l4.146 3.957a.75.75 0 01-1.036 1.085l-5.5-5.25a.75.75 0 010-1.085l5.5-5.25a.75.75 0 011.06.025z"
+                          clip-rule="evenodd"/>
+                </svg>
+            </div>
+            <div id="searchReturn"
+                 class="rounded-b-lg border border-slate-300 bg-slate-100 w-11/12 absolute top-full right-2 pt-6 px-4 hidden">
+                <div class="pages">
+
+                    <h2 class="text-smid font-bold text-sky-600">صفحات</h2>
+
+                    <div class="p-2 text-slate-700 space-y-2">
+                        <a href="#" class="flex items-center pr-4 border-r-2 border-slate-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                 class="w-5 h-5">
+                                <path d="M12.232 4.232a2.5 2.5 0 013.536 3.536l-1.225 1.224a.75.75 0 001.061 1.06l1.224-1.224a4 4 0 00-5.656-5.656l-3 3a4 4 0 00.225 5.865.75.75 0 00.977-1.138 2.5 2.5 0 01-.142-3.667l3-3z"/>
+                                <path d="M11.603 7.963a.75.75 0 00-.977 1.138 2.5 2.5 0 01.142 3.667l-3 3a2.5 2.5 0 01-3.536-3.536l1.225-1.224a.75.75 0 00-1.061-1.06l-1.224 1.224a4 4 0 105.656 5.656l3-3a4 4 0 00-.225-5.865z"/>
+                            </svg>
+                            <p class="text-smid font-semibold mr-3">
+                                صفحه نظرات
+                            </p>
+                        </a>
+
+                        <a href="#" class="flex items-center pr-4 border-r-2 border-slate-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                 class="w-5 h-5">
+                                <path d="M12.232 4.232a2.5 2.5 0 013.536 3.536l-1.225 1.224a.75.75 0 001.061 1.06l1.224-1.224a4 4 0 00-5.656-5.656l-3 3a4 4 0 00.225 5.865.75.75 0 00.977-1.138 2.5 2.5 0 01-.142-3.667l3-3z"/>
+                                <path d="M11.603 7.963a.75.75 0 00-.977 1.138 2.5 2.5 0 01.142 3.667l-3 3a2.5 2.5 0 01-3.536-3.536l1.225-1.224a.75.75 0 00-1.061-1.06l-1.224 1.224a4 4 0 105.656 5.656l3-3a4 4 0 00-.225-5.865z"/>
+                            </svg>
+
+                            <p class="text-smid font-semibold mr-3">
+                                صهحه نظرات
+                            </p>
+                        </a>
+
+                        <a href="#" class="flex items-center pr-4 border-r-2 border-slate-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                 class="w-5 h-5">
+                                <path d="M12.232 4.232a2.5 2.5 0 013.536 3.536l-1.225 1.224a.75.75 0 001.061 1.06l1.224-1.224a4 4 0 00-5.656-5.656l-3 3a4 4 0 00.225 5.865.75.75 0 00.977-1.138 2.5 2.5 0 01-.142-3.667l3-3z"/>
+                                <path d="M11.603 7.963a.75.75 0 00-.977 1.138 2.5 2.5 0 01.142 3.667l-3 3a2.5 2.5 0 01-3.536-3.536l1.225-1.224a.75.75 0 00-1.061-1.06l-1.224 1.224a4 4 0 105.656 5.656l3-3a4 4 0 00-.225-5.865z"/>
+                            </svg>
+
+                            <p class="text-smid font-semibold mr-3">
+                                صهحه نظرات
+                            </p>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+</header>
+<aside id="aside"
+       class="hide mini h-full fixed top-0 right-0 border-l border-slate-300 bg-slate-100 flex flex-col z-30 overflow-y-auto">
+    <header class="h-20 flex w-full items-center px-4">
+        <div class="logo w-2/3">
+            <img class="h-16" src="img/logo/logo.svg" alt="">
+        </div>
+        <div class="cursor w-1/3 cursor-pointer pl-5" onclick="toggleAside(this)">
+            <div class="h-5 w-5 float-left border-2 border-teal-400 rounded-full p-1">
+                <div class="hidden h-2 w-2 rounded-full bg-teal-400"></div>
+            </div>
+        </div>
+        <div class="close w-1/3 h-full flex items-center justify-center" onclick="hideMenu()">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="h-6 w-6 text-slate-700"
+                 stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </div>
+    </header>
+    <nav id="navList" class="p-4 space-y-2">
+        <div class="menuList">
+
+            <a class="head listItem">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                        <path d="M10 3.75a2 2 0 10-4 0 2 2 0 004 0zM17.25 4.5a.75.75 0 000-1.5h-5.5a.75.75 0 000 1.5h5.5zM5 3.75a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5a.75.75 0 01.75.75zM4.25 17a.75.75 0 000-1.5h-1.5a.75.75 0 000 1.5h1.5zM17.25 17a.75.75 0 000-1.5h-5.5a.75.75 0 000 1.5h5.5zM9 10a.75.75 0 01-.75.75h-5.5a.75.75 0 010-1.5h5.5A.75.75 0 019 10zM17.25 10.75a.75.75 0 000-1.5h-1.5a.75.75 0 000 1.5h1.5zM14 10a2 2 0 10-4 0 2 2 0 004 0zM10 16.25a2 2 0 10-4 0 2 2 0 004 0z"/>
+                    </svg>
+                </div>
+                <div class="name font-semibold mr-3 mt-1 text-nmid">
+                    داشبورد
+                </div>
+                <div class="extra">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                         stroke="currentColor" class="">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M16.5 8.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v8.25A2.25 2.25 0 006 16.5h2.25m8.25-8.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-7.5A2.25 2.25 0 018.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 00-2.25 2.25v6"/>
+                    </svg>
+                </div>
+            </a>
+            <ul class="listItems h-0 overflow-hidden trans px-2">
+                <li class="listItem">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                            <path d="M5.25 3A2.25 2.25 0 003 5.25v9.5A2.25 2.25 0 005.25 17h9.5A2.25 2.25 0 0017 14.75v-9.5A2.25 2.25 0 0014.75 3h-9.5z"/>
+                        </svg>
+                    </div>
+                    <div class="name font-semibold mr-3 mt-1 text-nmid">
+                        هدر
+                    </div>
+                </li>
+                <li class="listItem">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                            <path d="M5.25 3A2.25 2.25 0 003 5.25v9.5A2.25 2.25 0 005.25 17h9.5A2.25 2.25 0 0017 14.75v-9.5A2.25 2.25 0 0014.75 3h-9.5z"/>
+                        </svg>
+                    </div>
+                    <div class="name font-semibold mr-3 mt-1 text-nmid">
+                        هدر
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="divider relative !my-6 ">
+            <div class="title absolute w-full text-sm font-medium justify-center flex -top-2">
+                <p class="bg-slate-100 text-slate-400 px-2">مجوز ها</p>
+            </div>
+        </div>
+
+        <div class="menuList open active">
+            <a class="head listItem">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                        <path d="M10 3.75a2 2 0 10-4 0 2 2 0 004 0zM17.25 4.5a.75.75 0 000-1.5h-5.5a.75.75 0 000 1.5h5.5zM5 3.75a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5a.75.75 0 01.75.75zM4.25 17a.75.75 0 000-1.5h-1.5a.75.75 0 000 1.5h1.5zM17.25 17a.75.75 0 000-1.5h-5.5a.75.75 0 000 1.5h5.5zM9 10a.75.75 0 01-.75.75h-5.5a.75.75 0 010-1.5h5.5A.75.75 0 019 10zM17.25 10.75a.75.75 0 000-1.5h-1.5a.75.75 0 000 1.5h1.5zM14 10a2 2 0 10-4 0 2 2 0 004 0zM10 16.25a2 2 0 10-4 0 2 2 0 004 0z"/>
+                    </svg>
+                </div>
+                <div class="name font-semibold mr-3 mt-1 text-nmid">
+                    تنظیمات
+                </div>
+                <div class="extra">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                         stroke="currentColor" class="">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M16.5 8.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v8.25A2.25 2.25 0 006 16.5h2.25m8.25-8.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-7.5A2.25 2.25 0 018.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 00-2.25 2.25v6"/>
+                    </svg>
+                </div>
+            </a>
+            <ul class="listItems h-0 overflow-hidden trans px-2">
+                <li class="listItem">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                            <path d="M5.25 3A2.25 2.25 0 003 5.25v9.5A2.25 2.25 0 005.25 17h9.5A2.25 2.25 0 0017 14.75v-9.5A2.25 2.25 0 0014.75 3h-9.5z"/>
+                        </svg>
+                    </div>
+                    <div class="name font-semibold mr-3 mt-1 text-nmid">
+                        هدر
+                    </div>
+                </li>
+                <li class="listItem">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                            <path d="M5.25 3A2.25 2.25 0 003 5.25v9.5A2.25 2.25 0 005.25 17h9.5A2.25 2.25 0 0017 14.75v-9.5A2.25 2.25 0 0014.75 3h-9.5z"/>
+                        </svg>
+                    </div>
+                    <div class="name font-semibold mr-3 mt-1 text-nmid">
+                        هدر
+                    </div>
+                </li>
+                <li class="subMenuList open">
+                    <a class="head listItem">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                 class="w-5 h-5">
+                                <path d="M10 3.75a2 2 0 10-4 0 2 2 0 004 0zM17.25 4.5a.75.75 0 000-1.5h-5.5a.75.75 0 000 1.5h5.5zM5 3.75a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5a.75.75 0 01.75.75zM4.25 17a.75.75 0 000-1.5h-1.5a.75.75 0 000 1.5h1.5zM17.25 17a.75.75 0 000-1.5h-5.5a.75.75 0 000 1.5h5.5zM9 10a.75.75 0 01-.75.75h-5.5a.75.75 0 010-1.5h5.5A.75.75 0 019 10zM17.25 10.75a.75.75 0 000-1.5h-1.5a.75.75 0 000 1.5h1.5zM14 10a2 2 0 10-4 0 2 2 0 004 0zM10 16.25a2 2 0 10-4 0 2 2 0 004 0z"/>
+                            </svg>
+                        </div>
+                        <div class="name font-semibold mr-3 mt-1 text-nmid">
+                            تنظیمات
+                        </div>
+                        <div class="extra">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                 stroke="currentColor" class="">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                      d="M16.5 8.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v8.25A2.25 2.25 0 006 16.5h2.25m8.25-8.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-7.5A2.25 2.25 0 018.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 00-2.25 2.25v6"/>
+                            </svg>
+                        </div>
+                    </a>
+                    <ul class="listItems h-0 overflow-hidden trans px-2">
+                        <li class="listItem active">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                     class="w-5 h-5">
+                                    <path d="M5.25 3A2.25 2.25 0 003 5.25v9.5A2.25 2.25 0 005.25 17h9.5A2.25 2.25 0 0017 14.75v-9.5A2.25 2.25 0 0014.75 3h-9.5z"/>
+                                </svg>
+                            </div>
+                            <div class="name font-semibold mr-3 mt-1 text-nmid">
+                                هدر
+                            </div>
+                        </li>
+                        <li class="listItem">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                     class="w-5 h-5">
+                                    <path d="M5.25 3A2.25 2.25 0 003 5.25v9.5A2.25 2.25 0 005.25 17h9.5A2.25 2.25 0 0017 14.75v-9.5A2.25 2.25 0 0014.75 3h-9.5z"/>
+                                </svg>
+                            </div>
+                            <div class="name font-semibold mr-3 mt-1 text-nmid">
+                                هدر
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="divider relative !my-6 ">
+            <div class="title absolute w-full text-sm font-medium justify-center flex -top-2">
+                <p class="bg-slate-100 text-slate-400 px-2">مجوز ها</p>
+            </div>
+        </div>
+
+        <div class="menuList">
+            <a class="head listItem">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                        <path d="M10 3.75a2 2 0 10-4 0 2 2 0 004 0zM17.25 4.5a.75.75 0 000-1.5h-5.5a.75.75 0 000 1.5h5.5zM5 3.75a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5a.75.75 0 01.75.75zM4.25 17a.75.75 0 000-1.5h-1.5a.75.75 0 000 1.5h1.5zM17.25 17a.75.75 0 000-1.5h-5.5a.75.75 0 000 1.5h5.5zM9 10a.75.75 0 01-.75.75h-5.5a.75.75 0 010-1.5h5.5A.75.75 0 019 10zM17.25 10.75a.75.75 0 000-1.5h-1.5a.75.75 0 000 1.5h1.5zM14 10a2 2 0 10-4 0 2 2 0 004 0zM10 16.25a2 2 0 10-4 0 2 2 0 004 0z"/>
+                    </svg>
+                </div>
+                <div class="name font-semibold mr-3 mt-1 text-nmid">
+                    تنظیمات
+                </div>
+                <div class="extra">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                         stroke="currentColor" class="">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M16.5 8.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v8.25A2.25 2.25 0 006 16.5h2.25m8.25-8.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-7.5A2.25 2.25 0 018.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 00-2.25 2.25v6"/>
+                    </svg>
+                </div>
+            </a>
+            <ul class="listItems h-0 overflow-hidden trans px-2">
+                <li class="listItem">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                            <path d="M5.25 3A2.25 2.25 0 003 5.25v9.5A2.25 2.25 0 005.25 17h9.5A2.25 2.25 0 0017 14.75v-9.5A2.25 2.25 0 0014.75 3h-9.5z"/>
+                        </svg>
+                    </div>
+                    <div class="name font-semibold mr-3 mt-1 text-nmid">
+                        هدر
+                    </div>
+                </li>
+                <li class="listItem">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                            <path d="M5.25 3A2.25 2.25 0 003 5.25v9.5A2.25 2.25 0 005.25 17h9.5A2.25 2.25 0 0017 14.75v-9.5A2.25 2.25 0 0014.75 3h-9.5z"/>
+                        </svg>
+                    </div>
+                    <div class="name font-semibold mr-3 mt-1 text-nmid">
+                        هدر
+                    </div>
+                </li>
+                <li class="subMenuList open">
+                    <a class="head listItem">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                 class="w-5 h-5">
+                                <path d="M10 3.75a2 2 0 10-4 0 2 2 0 004 0zM17.25 4.5a.75.75 0 000-1.5h-5.5a.75.75 0 000 1.5h5.5zM5 3.75a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5a.75.75 0 01.75.75zM4.25 17a.75.75 0 000-1.5h-1.5a.75.75 0 000 1.5h1.5zM17.25 17a.75.75 0 000-1.5h-5.5a.75.75 0 000 1.5h5.5zM9 10a.75.75 0 01-.75.75h-5.5a.75.75 0 010-1.5h5.5A.75.75 0 019 10zM17.25 10.75a.75.75 0 000-1.5h-1.5a.75.75 0 000 1.5h1.5zM14 10a2 2 0 10-4 0 2 2 0 004 0zM10 16.25a2 2 0 10-4 0 2 2 0 004 0z"/>
+                            </svg>
+                        </div>
+                        <div class="name font-semibold mr-3 mt-1 text-nmid">
+                            تنظیمات
+                        </div>
+                        <div class="extra">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                 stroke="currentColor" class="">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                      d="M16.5 8.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v8.25A2.25 2.25 0 006 16.5h2.25m8.25-8.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-7.5A2.25 2.25 0 018.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 00-2.25 2.25v6"/>
+                            </svg>
+                        </div>
+                    </a>
+                    <ul class="listItems h-0 overflow-hidden trans px-2">
+                        <li class="listItem active">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                     class="w-5 h-5">
+                                    <path d="M5.25 3A2.25 2.25 0 003 5.25v9.5A2.25 2.25 0 005.25 17h9.5A2.25 2.25 0 0017 14.75v-9.5A2.25 2.25 0 0014.75 3h-9.5z"/>
+                                </svg>
+                            </div>
+                            <div class="name font-semibold mr-3 mt-1 text-nmid">
+                                هدر
+                            </div>
+                        </li>
+                        <li class="listItem">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                     class="w-5 h-5">
+                                    <path d="M5.25 3A2.25 2.25 0 003 5.25v9.5A2.25 2.25 0 005.25 17h9.5A2.25 2.25 0 0017 14.75v-9.5A2.25 2.25 0 0014.75 3h-9.5z"/>
+                                </svg>
+                            </div>
+                            <div class="name font-semibold mr-3 mt-1 text-nmid">
+                                هدر
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="divider relative !my-6 ">
+            <div class="title absolute w-full text-sm font-medium justify-center flex -top-2">
+                <p class="bg-slate-100 text-slate-400 px-2">مجوز ها</p>
+            </div>
+        </div>
+
+        <div class="menuList">
+            <a class="head listItem">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                        <path d="M10 3.75a2 2 0 10-4 0 2 2 0 004 0zM17.25 4.5a.75.75 0 000-1.5h-5.5a.75.75 0 000 1.5h5.5zM5 3.75a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5a.75.75 0 01.75.75zM4.25 17a.75.75 0 000-1.5h-1.5a.75.75 0 000 1.5h1.5zM17.25 17a.75.75 0 000-1.5h-5.5a.75.75 0 000 1.5h5.5zM9 10a.75.75 0 01-.75.75h-5.5a.75.75 0 010-1.5h5.5A.75.75 0 019 10zM17.25 10.75a.75.75 0 000-1.5h-1.5a.75.75 0 000 1.5h1.5zM14 10a2 2 0 10-4 0 2 2 0 004 0zM10 16.25a2 2 0 10-4 0 2 2 0 004 0z"/>
+                    </svg>
+                </div>
+                <div class="name font-semibold mr-3 mt-1 text-nmid">
+                    تنظیمات
+                </div>
+                <div class="extra">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                         stroke="currentColor" class="">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M16.5 8.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v8.25A2.25 2.25 0 006 16.5h2.25m8.25-8.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-7.5A2.25 2.25 0 018.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 00-2.25 2.25v6"/>
+                    </svg>
+                </div>
+            </a>
+            <ul class="listItems h-0 overflow-hidden trans px-2">
+                <li class="listItem">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                            <path d="M5.25 3A2.25 2.25 0 003 5.25v9.5A2.25 2.25 0 005.25 17h9.5A2.25 2.25 0 0017 14.75v-9.5A2.25 2.25 0 0014.75 3h-9.5z"/>
+                        </svg>
+                    </div>
+                    <div class="name font-semibold mr-3 mt-1 text-nmid">
+                        هدر
+                    </div>
+                </li>
+                <li class="listItem">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                            <path d="M5.25 3A2.25 2.25 0 003 5.25v9.5A2.25 2.25 0 005.25 17h9.5A2.25 2.25 0 0017 14.75v-9.5A2.25 2.25 0 0014.75 3h-9.5z"/>
+                        </svg>
+                    </div>
+                    <div class="name font-semibold mr-3 mt-1 text-nmid">
+                        هدر
+                    </div>
+                </li>
+                <li class="subMenuList open">
+                    <a class="head listItem">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                 class="w-5 h-5">
+                                <path d="M10 3.75a2 2 0 10-4 0 2 2 0 004 0zM17.25 4.5a.75.75 0 000-1.5h-5.5a.75.75 0 000 1.5h5.5zM5 3.75a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5a.75.75 0 01.75.75zM4.25 17a.75.75 0 000-1.5h-1.5a.75.75 0 000 1.5h1.5zM17.25 17a.75.75 0 000-1.5h-5.5a.75.75 0 000 1.5h5.5zM9 10a.75.75 0 01-.75.75h-5.5a.75.75 0 010-1.5h5.5A.75.75 0 019 10zM17.25 10.75a.75.75 0 000-1.5h-1.5a.75.75 0 000 1.5h1.5zM14 10a2 2 0 10-4 0 2 2 0 004 0zM10 16.25a2 2 0 10-4 0 2 2 0 004 0z"/>
+                            </svg>
+                        </div>
+                        <div class="name font-semibold mr-3 mt-1 text-nmid">
+                            تنظیمات
+                        </div>
+                        <div class="extra">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                 stroke="currentColor" class="">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                      d="M16.5 8.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v8.25A2.25 2.25 0 006 16.5h2.25m8.25-8.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-7.5A2.25 2.25 0 018.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 00-2.25 2.25v6"/>
+                            </svg>
+                        </div>
+                    </a>
+                    <ul class="listItems h-0 overflow-hidden trans px-2">
+                        <li class="listItem active">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                     class="w-5 h-5">
+                                    <path d="M5.25 3A2.25 2.25 0 003 5.25v9.5A2.25 2.25 0 005.25 17h9.5A2.25 2.25 0 0017 14.75v-9.5A2.25 2.25 0 0014.75 3h-9.5z"/>
+                                </svg>
+                            </div>
+                            <div class="name font-semibold mr-3 mt-1 text-nmid">
+                                هدر
+                            </div>
+                        </li>
+                        <li class="listItem">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                     class="w-5 h-5">
+                                    <path d="M5.25 3A2.25 2.25 0 003 5.25v9.5A2.25 2.25 0 005.25 17h9.5A2.25 2.25 0 0017 14.75v-9.5A2.25 2.25 0 0014.75 3h-9.5z"/>
+                                </svg>
+                            </div>
+                            <div class="name font-semibold mr-3 mt-1 text-nmid">
+                                هدر
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="divider relative !my-6 ">
+            <div class="title absolute w-full text-sm font-medium justify-center flex -top-2">
+                <p class="bg-slate-100 text-slate-400 px-2">مجوز ها</p>
+            </div>
+        </div>
+
+        <div class="menuList">
+            <a class="head listItem">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                        <path d="M10 3.75a2 2 0 10-4 0 2 2 0 004 0zM17.25 4.5a.75.75 0 000-1.5h-5.5a.75.75 0 000 1.5h5.5zM5 3.75a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5a.75.75 0 01.75.75zM4.25 17a.75.75 0 000-1.5h-1.5a.75.75 0 000 1.5h1.5zM17.25 17a.75.75 0 000-1.5h-5.5a.75.75 0 000 1.5h5.5zM9 10a.75.75 0 01-.75.75h-5.5a.75.75 0 010-1.5h5.5A.75.75 0 019 10zM17.25 10.75a.75.75 0 000-1.5h-1.5a.75.75 0 000 1.5h1.5zM14 10a2 2 0 10-4 0 2 2 0 004 0zM10 16.25a2 2 0 10-4 0 2 2 0 004 0z"/>
+                    </svg>
+                </div>
+                <div class="name font-semibold mr-3 mt-1 text-nmid">
+                    تنظیمات
+                </div>
+                <div class="extra">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                         stroke="currentColor" class="">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M16.5 8.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v8.25A2.25 2.25 0 006 16.5h2.25m8.25-8.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-7.5A2.25 2.25 0 018.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 00-2.25 2.25v6"/>
+                    </svg>
+                </div>
+            </a>
+            <ul class="listItems h-0 overflow-hidden trans px-2">
+                <li class="listItem">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                            <path d="M5.25 3A2.25 2.25 0 003 5.25v9.5A2.25 2.25 0 005.25 17h9.5A2.25 2.25 0 0017 14.75v-9.5A2.25 2.25 0 0014.75 3h-9.5z"/>
+                        </svg>
+                    </div>
+                    <div class="name font-semibold mr-3 mt-1 text-nmid">
+                        هدر
+                    </div>
+                </li>
+                <li class="listItem">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                            <path d="M5.25 3A2.25 2.25 0 003 5.25v9.5A2.25 2.25 0 005.25 17h9.5A2.25 2.25 0 0017 14.75v-9.5A2.25 2.25 0 0014.75 3h-9.5z"/>
+                        </svg>
+                    </div>
+                    <div class="name font-semibold mr-3 mt-1 text-nmid">
+                        هدر
+                    </div>
+                </li>
+                <li class="subMenuList open">
+                    <a class="head listItem">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                 class="w-5 h-5">
+                                <path d="M10 3.75a2 2 0 10-4 0 2 2 0 004 0zM17.25 4.5a.75.75 0 000-1.5h-5.5a.75.75 0 000 1.5h5.5zM5 3.75a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5a.75.75 0 01.75.75zM4.25 17a.75.75 0 000-1.5h-1.5a.75.75 0 000 1.5h1.5zM17.25 17a.75.75 0 000-1.5h-5.5a.75.75 0 000 1.5h5.5zM9 10a.75.75 0 01-.75.75h-5.5a.75.75 0 010-1.5h5.5A.75.75 0 019 10zM17.25 10.75a.75.75 0 000-1.5h-1.5a.75.75 0 000 1.5h1.5zM14 10a2 2 0 10-4 0 2 2 0 004 0zM10 16.25a2 2 0 10-4 0 2 2 0 004 0z"/>
+                            </svg>
+                        </div>
+                        <div class="name font-semibold mr-3 mt-1 text-nmid">
+                            تنظیمات
+                        </div>
+                        <div class="extra">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                 stroke="currentColor" class="">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                      d="M16.5 8.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v8.25A2.25 2.25 0 006 16.5h2.25m8.25-8.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-7.5A2.25 2.25 0 018.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 00-2.25 2.25v6"/>
+                            </svg>
+                        </div>
+                    </a>
+                    <ul class="listItems h-0 overflow-hidden trans px-2">
+                        <li class="listItem active">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                     class="w-5 h-5">
+                                    <path d="M5.25 3A2.25 2.25 0 003 5.25v9.5A2.25 2.25 0 005.25 17h9.5A2.25 2.25 0 0017 14.75v-9.5A2.25 2.25 0 0014.75 3h-9.5z"/>
+                                </svg>
+                            </div>
+                            <div class="name font-semibold mr-3 mt-1 text-nmid">
+                                هدر
+                            </div>
+                        </li>
+                        <li class="listItem">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                     class="w-5 h-5">
+                                    <path d="M5.25 3A2.25 2.25 0 003 5.25v9.5A2.25 2.25 0 005.25 17h9.5A2.25 2.25 0 0017 14.75v-9.5A2.25 2.25 0 0014.75 3h-9.5z"/>
+                                </svg>
+                            </div>
+                            <div class="name font-semibold mr-3 mt-1 text-nmid">
+                                هدر
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="divider relative !my-6">
+            <div class="title absolute w-full text-sm font-medium justify-center flex -top-2">
+                <p class="bg-slate-100 text-slate-400 px-2">مجوز ها</p>
+            </div>
+        </div>
+
+        <div class="menuitem">
+            <a href="#" class="head listItem">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                        <path d="M10 3.75a2 2 0 10-4 0 2 2 0 004 0zM17.25 4.5a.75.75 0 000-1.5h-5.5a.75.75 0 000 1.5h5.5zM5 3.75a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5a.75.75 0 01.75.75zM4.25 17a.75.75 0 000-1.5h-1.5a.75.75 0 000 1.5h1.5zM17.25 17a.75.75 0 000-1.5h-5.5a.75.75 0 000 1.5h5.5zM9 10a.75.75 0 01-.75.75h-5.5a.75.75 0 010-1.5h5.5A.75.75 0 019 10zM17.25 10.75a.75.75 0 000-1.5h-1.5a.75.75 0 000 1.5h1.5zM14 10a2 2 0 10-4 0 2 2 0 004 0zM10 16.25a2 2 0 10-4 0 2 2 0 004 0z"/>
+                    </svg>
+                </div>
+                <div class="name font-semibold mr-3 mt-1 text-nmid">
+                    تنظیمات
+                </div>
+            </a>
+        </div>
+
+    </nav>
+</aside>
+
+
+<div id="content" class="mini w-full pt-16 text-slate-700 pb-6">
+    <div id="contentWraper" class="w-11/12 mx-auto mt-16 lg:w-96p sm:w-full space-y-6 pb-6">
+
+
+        <div class="grid grid-cols-2 xl:grid-cols-1">
+            <div class="timeline flex flex-col card p-4">
+
+                <div class="wraper p-3 pt-0 border-r border-slate-300 space-y-10">
+
+                    <div class="timeline-item relative">
+                        <span class="flex h-4 w-4 absolute -right-5 top-0">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-4 w-4 bg-orange-500"></span>
+                          </span>
+
+
+                        <div class="top flex items-center justify-between mb-4 pb-2 border-b border-slate-300">
+
+                            <div class="title mr-2 font-bold text-mid">
+                                خرید کفش
+                            </div>
+
+                            <div class="more space-x-2 space-x-reverse">
+                                <h2 class="text-sm inline-block font-semibold text-slate-400">6 فروردین</h2>
+                                <a class="badg shadow-md shadow-indigo-200 dark:shadow-indigo-500/60 hover:shadow-lg hover:shadow-indigo-200 dark:hover:shadow-indigo-700 bg-indigo-500 text-slate-50 hover:bg-indigo-400 inline-block rounded-full">
+                                    <p class="inline">
+                                        ایندیگو
+                                    </p>
+                                </a>
+                                <a class="badg line text-gray-500 bg-gray-500/10 hover:bg-gray-500/100 inline-block rounded-full border-gray-500 hover:text-slate-50">
+                                    <p class="inline">
+                                        خاکستری
+                                    </p>
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <p class="text-smid">
+                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                            چاپگرها و متون بلکه
+                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                            چاپگرها و متون بلکه
+                        </p>
+
+                    </div>
+                    <div class="timeline-item relative">
+                        <span class="flex h-4 w-4 absolute -right-5 top-0">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-4 w-4 bg-blue-500"></span>
+                          </span>
+
+
+                        <div class="top flex items-center justify-between mb-4 pb-2 border-b border-slate-300">
+
+                            <div class="title mr-2 font-bold text-mid">
+                                رفتن به باشگاه
+                            </div>
+
+                            <div class="more space-x-2 space-x-reverse">
+                                <h2 class="text-sm inline-block font-semibold text-slate-400">10 فروردین</h2>
+                            </div>
+
+                        </div>
+
+                        <p class="text-smid">
+                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                            چاپگرها و متون بلکه
+                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                            چاپگرها و متون بلکه
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div id="overlay"
+     class="fixed w-full h-full bg-slate-800 bg-opacity-50 dark:bg-slate-900 dark:bg-opacity-80  top-0 right-0 z-10 hidden"></div>
+
+
+</body>
+<script src="js/main.js"></script>
+<script src="js/tab.js"></script>
+
+
+</html>

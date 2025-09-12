@@ -1,0 +1,134 @@
+
+
+/*checkbox*/
+.radioWraper,
+.checkboxWraper{
+    @apply px-3 py-1 flex items-center
+}
+
+.radioWraper label,
+.checkboxWraper label{
+    transition: all 500ms;
+    @apply pr-3 inline-flex items-center cursor-pointer
+}
+.radioWraper label.box,
+.checkboxWraper label.box{
+    transition: all 500ms;
+    @apply pr-3 inline-block p-3
+}
+.radioWraper.img label.box,
+.checkboxWraper.img label.box{
+    @apply border-2
+}
+
+.radioWraper input:checked + label.box,
+.checkboxWraper input:checked + label.box{
+    @apply border-teal-400
+}
+
+
+.radioWraper.img label.box span.check,
+.checkboxWraper.img label.box span.check{
+    @apply none-show
+}
+.radioWraper.img input:checked + label.box span.check,
+.checkboxWraper.img input:checked + label.box span.check{
+    @apply do-show
+}
+
+
+.radioWraper label span.check,
+.checkboxWraper label span.check{
+    width: 20px;
+    height: 20px;
+    display: block;
+    transition: all 150ms;
+    margin-left: 10px;
+    position: relative;
+    @apply ring-2 ring-slate-400 ring-inset rounded-md md:w-[18px] md:h-[18px]
+}
+
+.radioWraper label span.check{
+    @apply rounded-full
+}
+
+
+.checkboxWraper label span.check::before{
+    content: "";
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-bottom: 0px solid #fff;
+    border-left: 0px solid #fff;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%,-76%) rotate(-45deg);
+    transition: height 200ms 150ms,width 200ms 300ms,opacity 300ms 150ms;
+
+}
+
+.radioWraper label span.check::before{
+    transition: all 500ms;
+    content: "";
+    display: block;
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%,-50%);
+    @apply rounded-full
+}
+
+
+.checkboxWraper input:checked + label span.check::before{
+    width: 11px;
+    height: 5px;
+    opacity: 1;
+    border-bottom: 2px solid #fff;
+    border-left: 2px solid #fff;
+}
+
+.radioWraper input:checked + label span.check::before{
+    width: 8px;
+    height: 8px;
+    opacity: 1;
+    @apply bg-white
+}
+
+
+.radioWraper input:checked + label span.check,
+.checkboxWraper input:checked + label span.check{
+    animation: bounce .4s both;
+    @apply border-[10px] md:border-[9px]
+}
+
+
+
+
+.radioWraper input:disabled + label,
+.checkboxWraper input:disabled + label{
+    @apply opacity-50
+}
+
+
+.radioWraper input,
+.checkboxWraper input{
+    display: none;
+}
+
+
+@keyframes bounce {
+    0%,100%{
+        transform: scale(1);
+    }
+    33%{
+        transform: scale(.8);
+    }
+    66%{
+        transform: scale(1.2);
+    }
+}

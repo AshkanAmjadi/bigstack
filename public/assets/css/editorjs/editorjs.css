@@ -1,0 +1,74 @@
+.ce-block__content,
+.ce-toolbar__content {
+    max-width: 1000px !important;  /* example value, adjust for your own use case */
+}
+.ce-block__content h1,
+.ce-block__content h2,
+.ce-block__content h3,
+.ce-block__content h4,
+.ce-block__content h5,
+.ce-block__content h6{
+    font-weight: bold;
+}
+.ce-block__content h1{
+    font-size: 2em;
+}
+.ce-block__content h2{
+    font-size: 1.5em;
+}
+.ce-block__content h3{
+    font-size: 1.17em;
+}
+.ce-block__content h4{
+    font-size: 1em;
+}
+.ce-block__content h5{
+    font-size: .83em;
+}
+.ce-block__content h6{
+    font-size: .67em;
+}
+
+.ce-popover {
+    --max-height : 400px
+}
+.ce-toolbar{
+    left: 13px;
+    top: 0;
+}
+.ce-popover-item__title{
+    margin-right: 10px;
+}
+.ce-popover-item__title{
+    overflow: visible;
+}
+.allertChange path {
+    stroke: none;
+}
+.codex-editor{
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.ce-editorjsColumns_col{
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+    padding-left: 0.875rem;
+    padding-right: 0.875rem;
+    border: 1px solid grey;
+    border-radius: 8px;
+}
+.tc-add-column{
+    z-index: 48;
+}
+.ce-code__textarea{
+    direction: ltr;
+}
+.ce-inline-tool,
+.ce-inline-toolbar__dropdown-arrow,
+.ce-inline-toolbar__dropdown-content,
+.ce-conversion-toolbar{
+    color: black !important;
+}
+
+

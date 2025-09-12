@@ -1,0 +1,12 @@
+.form-file,
+.form-input{
+    @apply py-2.5 px-3.5 focus:border-teal-500 outline-none
+}
+.form-file2,
+.form-input2{
+    @apply py-2.5 px-3.5 focus:border-teal-500 border-2 border-transparent trans  outline-none card_cwc
+}
+
+.form-input-zinc {
+    @apply bg-zinc-200 dark:bg-zinc-800
+}

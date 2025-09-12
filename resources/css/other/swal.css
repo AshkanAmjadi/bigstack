@@ -1,0 +1,52 @@
+.swal2-popup.swal2-toast,
+.swal2-popup{
+    border: inherit;
+    @apply dark:bg-slate-800 dark:text-slate-300 border-inherit border border-slate-300
+}
+
+
+.swal2-popup .swal2-icon .swal2-icon-content{
+    @apply mt-5
+}
+
+.swal2-toast .swal2-icon .swal2-icon-content{
+    @apply mt-2
+}
+
+.swal2-html-container{
+    @apply text-mid
+}
+.swal2-title{
+    @apply text-nextr mt-5
+}
+
+.swal2-popup.swal2-toast.colored-toast.swal2-icon-success {
+    border: none;
+    @apply !bg-emerald-500
+}
+
+.swal2-popup.swal2-toast.colored-toast.swal2-icon-error {
+    border: none;
+    @apply !bg-rose-600
+}
+
+.swal2-popup.swal2-toast.colored-toast.swal2-icon-warning {
+    border: none;
+    @apply !bg-orange-500
+}
+
+.swal2-popup.swal2-toast.colored-toast.swal2-icon-info {
+    border: none;
+    @apply !bg-sky-500
+}
+
+.swal2-popup.swal2-toast.colored-toast.swal2-icon-question {
+    border: none;
+    @apply !bg-slate-600
+}
+
+.swal2-popup.swal2-toast.colored-toast .swal2-title,
+.swal2-popup.swal2-toast.colored-toast .swal2-close,
+.swal2-popup.swal2-toast.colored-toast .swal2-html-container {
+    @apply text-white
+}

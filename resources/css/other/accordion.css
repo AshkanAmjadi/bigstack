@@ -1,0 +1,15 @@
+.accordion > .content{
+    @apply h-0p px-4 opacity-0
+}
+.accordion.open{
+    @apply border-indigo-600 dark:border-indigo-400
+}
+.accordion.open > .head{
+    @apply text-indigo-500
+}
+.accordion.open > .head .arrow{
+    @apply -rotate-90
+}
+.accordion.open > .content{
+    @apply h-auto py-3 opacity-100
+}

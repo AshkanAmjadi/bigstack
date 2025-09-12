@@ -1,0 +1,8 @@
+.swiper-slide > img{
+    @apply w-full h-full
+}
+
+
+.swiper-pagination-bullet-active{
+    @apply bg-blue-500
+}

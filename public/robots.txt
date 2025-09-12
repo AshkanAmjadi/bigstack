@@ -1,0 +1,17 @@
+User-agent: *
+
+Disallow:/logoute
+Disallow:/userPanel
+Disallow:/userPanel/*
+Disallow:/auth
+Disallow:/auth/*
+
+Sitemap: http://localhost:8000/sitemap.xml
+Sitemap: http://localhost:8000/sitemap-static.xml
+Sitemap: http://localhost:8000/sitemap-article.xml
+Sitemap: http://localhost:8000/sitemap-category.xml
+Sitemap: http://localhost:8000/sitemap-tag.xml
+Sitemap: http://localhost:8000/sitemap-article-list.xml
+Sitemap: http://localhost:8000/sitemap-project.xml
+Sitemap: http://localhost:8000/sitemap-page.xml
+Sitemap: http://localhost:8000/sitemap-discussion.xml

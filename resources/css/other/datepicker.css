@@ -1,0 +1,52 @@
+jdp-container{
+    @apply dark:bg-slate-700
+}
+.jdp-day-name{
+    @apply dark:text-slate-50
+}
+.jdp-day{
+    @apply dark:text-slate-50
+}
+
+.jdp-icon-plus>svg,
+.jdp-icon-minus>svg{
+    @apply fill-slate-50
+}
+
+.jdp-btn-close,
+.jdp-btn-today,
+.jdp-btn-empty,
+.jdp-day.selected,
+.jdp-icon-plus,
+.jdp-icon-minus{
+    @apply shadow-md hover:shadow-lg text-slate-50 inline-block rounded-md !border-none
+}
+.jdp-icon-plus {
+    @apply shadow-emerald-500/60 hover:shadow-emerald-700/60 bg-emerald-500 hover:bg-emerald-400
+}
+.jdp-icon-minus{
+    @apply  shadow-rose-500/60 hover:shadow-rose-700/60 bg-rose-500 hover:bg-rose-400
+}
+
+.jdp-btn-close,
+.jdp-btn-today,
+.jdp-btn-empty,
+.jdp-day.selected{
+    @apply shadow-blue-500/60 hover:shadow-blue-700/60 bg-blue-500 hover:bg-blue-400
+}
+.jdp-time,
+.jdp-time > select,
+.jdp-year > select,
+.jdp-month > select{
+    @apply dark:!text-slate-50 dark:!bg-slate-800
+}
+
+.jdp-time,
+.jdp-time > select{
+    @apply dark:!text-slate-50 dark:!bg-slate-700
+
+}
+
+.pcr-app{
+    @apply !rounded-md bg-slate-50 border border-slate-300 dark:bg-slate-900 relative trans;
+}

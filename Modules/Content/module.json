@@ -1,0 +1,13 @@
+{
+    "name": "Content",
+    "alias": "content",
+    "description": "Content management module",
+    "keywords": [],
+    "version": 999,
+    "providers": [
+        "Modules\\Content\\app\\Providers\\ContentServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

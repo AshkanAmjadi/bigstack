@@ -1,0 +1,28 @@
+.alink,
+.descContent h6 a,
+.descContent h5 a,
+.descContent h4 a,
+.descContent h3 a,
+.descContent h2 a,
+.descContent p a,
+.descContent h1 a{
+
+    @apply underline decoration-blue-600 decoration-2 text-blue-600
+}
+
+
+.paragraphSize{
+    @apply text-nsmid xl:text-mid md:text-lg
+}
+.paragraph{
+    @apply paragraphSize font-semibold
+}
+
+
+.p-normal {
+    @apply text-smid font-normal indent-4 leading-6 px-2
+}
+
+.descContent code {
+    direction: ltr;
+}

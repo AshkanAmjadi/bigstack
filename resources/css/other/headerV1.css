@@ -1,0 +1,82 @@
+#nav a.navLink {
+    @apply inline-flex items-center gap-1
+}
+
+#nav .content{
+    background-color: var(--accent-color);
+    box-shadow: 0 5px 20px -5px var(--accent-color);
+}
+#nav .content > li {
+    @apply items-center
+}
+
+#nav .content > li > a {
+    @apply py-5
+}
+
+#nav * {
+    @apply transition-all
+}
+
+#nav .content li {
+    @apply flex gap-1 font-medium
+
+}
+
+#nav .content li > a {
+    @apply cursor-pointer
+
+}
+
+#nav .content li .subNav {
+    @apply DL absolute transition-all w-56 top-full-smaler-1 text-slate-700 p-2 bg-white rounded-lg shadow-md opacity-0 pointer-events-none scale-95 translate-y-2
+}
+
+
+#nav .content .subNav li {
+
+    @apply  rounded-md justify-between
+
+}
+
+#nav .content .subNav li:hover {
+
+    @apply bg-slate-200 dark:bg-slate-800
+
+}
+
+
+#nav .content li:hover > .subNav {
+    @apply opacity-100 pointer-events-auto scale-100 translate-y-0
+
+}
+
+
+#nav .content .subNav .subNav {
+    @apply right-full-smaler-1 top-0
+
+}
+
+#nav .content .subNav > li {
+    @apply relative
+
+}
+
+#sidebar{
+    @apply transall
+}
+#front-aside,
+#asideOverlay,
+.aside {
+    @apply scale-100
+}
+
+#front-aside.hide,
+#asideOverlay.hide,
+.aside.hide {
+    @apply none-show scale-95
+}
+
+.aside {
+    @apply dark:shadow-[0_0_20px_-1px] dark:shadow-slate-950
+}

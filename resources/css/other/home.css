@@ -1,0 +1,62 @@
+.top-headline {
+
+    background: var(--accent-color);
+    background: linear-gradient(to right, #5e12cf 0%, #6c1bd5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 0px 30px #5e12cf;
+}
+
+.middle-headline {
+    background: var(--accent-color);
+    background: linear-gradient(to right, #5e12cf 0%, #6c1bd5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 0px 30px var(--accent-color);
+}
+.head-cards{
+    @apply DL p-10 lg:p-5 rounded-2xl trans-250;
+    position: relative;
+    overflow: hidden;
+    border: 2px transparent solid;
+
+}
+.head-cards .label {
+    background: var(--accent-color);
+    box-shadow: 10px 10px 30px var(--accent-color);
+}
+
+.head-cards:hover {
+
+    border: 2px var(--accent-color) solid;
+    box-shadow: 10px 10px 30px -10px var(--accent-color);
+
+}
+
+.head-cards::before {
+
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 60px;
+    background-color: var(--accent-color);
+    left: -30%;
+    top: 0;
+    filter: blur(30px);
+    opacity: .2;
+    transition: 1s;
+
+
+}
+.head-cards .bg-icon {
+
+
+    position: absolute;
+
+
+
+}
+
+.head-cards:hover::before {
+    left: 130%;
+}

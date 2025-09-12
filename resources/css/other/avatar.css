@@ -1,0 +1,69 @@
+.user,
+.avatar{
+
+    @apply h-10 w-10 rounded-full ring-1 ring-slate-500 ring-offset-2 dark:ring-offset-slate-800 inline-block relative;
+
+}
+
+.user > img,
+.avatar > img{
+    @apply rounded-full
+}
+
+
+.user.letter > p,
+.avatar.letter > p{
+    @apply flex items-center justify-center leading-5 font-semibold translate-y-0.5
+}
+
+
+.avatar.fsm{
+    @apply h-6 w-6
+
+}
+
+.avatar.lg{
+    @apply h-12 w-12
+}
+.avatar.sm{
+    @apply h-8 w-8
+}
+
+.avatar.xl{
+    @apply h-14 w-14
+
+}
+
+.avatar.\32xl{
+    @apply h-16 w-16
+
+}
+.avatar.\33xl{
+    @apply h-20 w-20
+
+}
+.avatar.\34xl{
+    @apply h-24 w-24
+
+}
+.avatar.\35xl{
+    @apply h-32 w-32
+
+}
+.avatar.\36xl{
+    @apply h-44 w-44
+
+}
+
+
+.avatar-group {
+    @apply flex items-center
+}
+
+.avatar-group > .avatar{
+    @apply -mr-2 ring-offset-0 ring-2 ring-slate-50 dark:ring-slate-900
+}
+
+.avatar-group.hover-top > .avatar:hover{
+    @apply -translate-y-2
+}
