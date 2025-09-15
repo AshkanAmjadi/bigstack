@@ -19,7 +19,7 @@
     @show
     <title>@yield('title','dashboard')</title>
 </head>
-<body class="bg-slate-100 text-slate-700 font-medium">
+<body class="font-medium" dir="ltr">
 @include('user::userPanel.temp.header')
 @include('user::userPanel.temp.aside')
 

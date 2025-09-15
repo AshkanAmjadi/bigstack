@@ -2,7 +2,7 @@
 
     @endphp
 
-<header id="header" class="mini w-full h-16 border-b border-slate-300 flex items-center px-5 space-x-5 fixed top-0 z-20 lg:space-x-3 text-slate-700 bg-slate-100">
+<header id="header" class="mini w-full h-16 border-b border-slate-300 flex items-center px-5 space-x-5 fixed top-0 z-20 lg:space-x-3 text-slate-700 DL-I">
     <div class="profile hasList flex">
 
         @component('user::component.avatar.avatar',['class' => 'dropBtn cursor-pointer'])
@@ -21,7 +21,7 @@
         <ul class="list hide left-0 top-10 w-72 flex flex-col">
             <li class="link">
 
-                @component('user::component.avatar.avatar',['class' => 'ml-3'])
+                @component('user::component.avatar.avatar',['class' => 'mr-3'])
                     @if($user = auth()->user())
 
                         @slot('image')
@@ -53,7 +53,7 @@
 
 
                 </div>
-                <p>پروفایل</p>
+                <p>Profile</p>
             </a>
 
             @component('component.divider.divider',[])
@@ -62,18 +62,22 @@
 
 
             <li class="px-3 py-2">
-                <a href="{{route('logout')}}"
-                   class="btn w-full shadow-md shadow-red-200 dark:shadow-red-500/60 hover:shadow-lg hover:shadow-red-200 dark:hover:shadow-red-700 bg-red-500 text-slate-50 hover:bg-red-400 inline-block rounded-md focus:shadow-none focus:bg-red-600 focus:ring-2 focus:ring-red-600 focus:ring-offset-2">
-                    <div class="icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
-                            <path fill-rule="evenodd"
-                                  d="M10 2a.75.75 0 01.75.75v7.5a.75.75 0 01-1.5 0v-7.5A.75.75 0 0110 2zM5.404 4.343a.75.75 0 010 1.06 6.5 6.5 0 109.192 0 .75.75 0 111.06-1.06 8 8 0 11-11.313 0 .75.75 0 011.06 0z"
-                                  clip-rule="evenodd"/>
-                        </svg>
+                <form action="{{route('logout')}}" method="POST" class="w-full">
+                    @csrf
+                    <button type="submit"
+                            class="btn w-full shadow-md shadow-red-200 dark:shadow-red-500/60 hover:shadow-lg hover:shadow-red-200 dark:hover:shadow-red-700 bg-red-500 text-slate-50 hover:bg-red-400 inline-block rounded-md focus:shadow-none focus:bg-red-600 focus:ring-2 focus:ring-red-600 focus:ring-offset-2">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                 class="w-5 h-5">
+                                <path fill-rule="evenodd"
+                                      d="M10 2a.75.75 0 01.75.75v7.5a.75.75 0 01-1.5 0v-7.5A.75.75 0 0110 2zM5.404 4.343a.75.75 0 010 1.06 6.5 6.5 0 109.192 0 .75.75 0 111.06-1.06 8 8 0 11-11.313 0 .75.75 0 011.06 0z"
+                                      clip-rule="evenodd"></path>
+                            </svg>
 
-                    </div>
-                    <p>خروج</p>
-                </a>
+                        </div>
+                        <p>Logout</p>
+                    </button>
+                </form>
             </li>
 
 
@@ -104,7 +108,7 @@
             <div
                 class="header w-full h-16 absolute top-0 border-b border-slate-300 flex items-center justify-between px-6">
 
-                <h2 class="font-bold">اعلان ها</h2>
+                <h2 class="font-bold">Notifications</h2>
                 @component('component.btn.linkBtn',['title' => 'Show Allerts' , 'size' => 'sm'])
                     @slot('href')
                         {{route('user-panel.allerts')}}

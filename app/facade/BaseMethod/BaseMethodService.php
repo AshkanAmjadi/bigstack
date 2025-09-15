@@ -372,9 +372,11 @@ class BaseMethodService
     public function checkUserCanChangeUsername(){
 
         $data = collect();
-        $data->can = (int)auth()->user()->username_set  + (60 * 60 * 24 * 365) < now()->timestamp;
-        $data->diff =  secondsToTime((int)auth()->user()->username_set + (60 * 60 * 24 * 365) - now()->timestamp);
 
+        $data->put('can' , (int)auth()->user()->username_set  + (60 * 60 * 24 * 365) < now()->timestamp);
+        $data->put('diff',secondsToTime((int)auth()->user()->username_set + (60 * 60 * 24 * 365) - now()->timestamp)) ;
+
+        \Illuminate\Log\log($data);
         return $data;
     }
     public function checkPrivate($subject){

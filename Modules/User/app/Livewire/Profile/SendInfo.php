@@ -46,10 +46,10 @@ class SendInfo extends Component
             'insta_id' => ['string','min:3','max:255',$unique_validation],
             'about_me' => ['string','min:3','max:65000'],
             'email' => ['nullable','string','email','min:3','max:200',$unique_validation],
-            'melicode' => ['numeric','nullable','string',BaseValidation::validationForMelicode(),$unique_validation,'ir_national_id'],
+//            'melicode' => ['numeric','nullable','string',BaseValidation::validationForMelicode(),$unique_validation,'ir_national_id'],
             'birth' => [
                 'required',
-                'persian_date',
+//                'persian_date',
                 function ($attribute, $value, $fail) {
                     if (!preg_match("/^[0-9]{4}\/(|[0-1])[0-9]\/(|[0-3])[0-9]$/",$value))
                     {

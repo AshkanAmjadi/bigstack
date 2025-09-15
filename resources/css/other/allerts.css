@@ -4,5 +4,5 @@
     @apply p-4 !flex items-center cursor-pointer font-semibold
 }
 .allert .content{
-    @apply w-full text-smid pl-3
+    @apply w-full text-smid pr-3
 }

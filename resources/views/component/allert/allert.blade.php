@@ -14,11 +14,11 @@
 }
 @endphp
 <div class="allert group text-{{$color}}-500 bg-{{$color}}-500/10 hover:bg-{{$color}}-500/100 inline-block rounded-md border-{{$color}}-500 focus:bg-{{$color}}-600 focus:border-{{$color}}-600 focus:ring-2 focus:ring-{{$color}}-600 focus:ring-offset-2 focus:text-slate-50 hover:text-slate-50" @isset($action){{$action}}@endisset>
-    <div class="content flex flex-wrap gap-3 items-center">
+    <div class="content flex flex-wrap gap-3 items-center flex-row-reverse">
         @isset($mainIcon)
             {{$mainIcon}}
         @endisset
-        <div class="text-smid md:text-lg font-semibold hyphens-auto ">
+        <div class="text-smid md:text-lg font-semibold hyphens-auto " dir="ltr">
             @isset($title)
                 {{$title}}
             @endisset

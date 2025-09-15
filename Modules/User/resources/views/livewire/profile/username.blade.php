@@ -6,7 +6,7 @@
                 {{ auth()->user()->username . '@'}}
             </a>
             <p class="text-lg font-bold opacity-75 mt-5">
-                نام کاربری شما
+                Your username
             </p>
         </div>
     @endif
@@ -15,8 +15,8 @@
 
             <div class="wraper md:col-span-2">
                 <div class="flex items-center gap-3">
-                    <h2 class="text-sm mr-4 font-semibold">نام کاربری</h2>
-                    <p class="text-sm font-bold text-red-600">ضروری</p>
+                    <h2 class="text-sm mr-4 font-semibold">Username</h2>
+                    <p class="text-sm font-bold text-red-600">Required</p>
                 </div>
 
                 <div class="relative">
@@ -32,11 +32,12 @@
 
                     <input id="username" class="form-input2 text-smid w-full pl-10"
                            wire:input.debounce.1000ms="username($event.target.value)" name="username" type="text"
-                           value="{{auth()->user()->username}}" dir="ltr" placeholder="نام کاربری">
+                           value="{{auth()->user()->username}}" dir="ltr" placeholder="Username">
                     @if($ok)
                         <div class="mt-5">
-                            @component('component.allert.allert',['closeBtn' => false,'title' => 'این نام کاربری ثبت نشده و میتوانید آن را ثبت کنید.','color' => 'emerald'])
+                            @component('component.allert.allert', ['closeBtn' => false, 'title' => 'This username is not registered and you can register it.', 'color' => 'emerald'])
                             @endcomponent
+
                         </div>
                     @endif
 
@@ -47,7 +48,7 @@
                         <div class="inline-block" wire:click.debounce.300ms="setUsername">
                             @component('component.btn.btnD',['color'=>'emerald','tabindex' => true])
                                 @slot('title')
-                                    ثبت نام کاربری ({{$newUsername}}@)
+                                    User Registration ({{$newUsername}}@)
                                 @endslot
                                 @slot('icon')
 
@@ -82,7 +83,7 @@
                     @endif
                 </div>
                 <div class="mt-5">
-                    @component('component.allert.allert',[ 'color'=> 'orange', 'title' => 'در ثبت نام کاربری خود دقت کنید.یک سال بعد از ثبت نام کاربری میتوانید آن را تغییر دهید.','closeBtn'=>false])
+                    @component('component.allert.allert', ['color' => 'orange','title' => 'Be careful when registering your username. You can change it one year after registration.','closeBtn' => false])
                         @slot('mainIcon')
                             <svg class="icon-md" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                  viewBox="0 0 24 24">
@@ -108,7 +109,7 @@
 
             @if($diffTimeForUsernameChane)
                 <div class="mt-5">
-                    @component('component.allert.allert',[ 'color'=> 'blue', 'title' => "$diffTimeForUsernameChane بعد میتوانید برای تغییر نام کاربری اقدام کنید.",'closeBtn'=>false])
+                    @component('component.allert.allert', ['color' => 'blue','title' => "You can request to change your username in $diffTimeForUsernameChane.",'closeBtn' => false])
                         @slot('mainIcon')
                             <svg class="icon-md" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                  viewBox="0 0 24 24">

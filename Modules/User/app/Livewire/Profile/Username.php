@@ -28,13 +28,13 @@ class Username extends Component
         if (auth()->user()->username) {
 
             $status = BaseMethod::checkUserCanChangeUsername();
-            if ($status->can){
+            if ($status->get('can')){
                 $this->canChange = true;
 
             }else{
 
                 $this->canChange = false;
-                $this->diffTimeForUsernameChane = $status->diff;
+                $this->diffTimeForUsernameChane = $status->get('diff');
 
             }
 
@@ -71,7 +71,7 @@ class Username extends Component
         $validate = $this->validateUsername($this->newUsername);
 
 
-        if (BaseMethod::checkUserCanChangeUsername()->can) {
+        if (BaseMethod::checkUserCanChangeUsername()->get('can')) {
             $this->canChange = false;
             $this->errors = [];
             $this->ok = false;

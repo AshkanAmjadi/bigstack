@@ -2,7 +2,7 @@
     <div class="inline-block">
         @component('component.btn.btnD',['color'=>'rose','tabindex' => true])
             @slot('title')
-                ارسال اطلاعات
+                Send
             @endslot
             @slot('icon')
                     <svg wire:loading.remove xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"

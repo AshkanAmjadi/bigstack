@@ -1119,10 +1119,10 @@ if (!function_exists('secondsToTime')){
             $h = '0' . $h;
         }
 
-        $s = "$s ثانیه";
-        $m = $m > 0 ? "$m دقیقه و" : '';
-        $h = $h > 0 ? "$h ساعت و" : '';
-        $d = $d > 0 ? "$d روز و" : '';
+        $s = " $s seconds ";
+        $m = $m > 0 ? " $m  minutes and" : '';
+        $h = $h > 0 ? " $h hours and" : '';
+        $d = $d > 0 ? " $d days and" : '';
 
 
         return $d.$h.$m.$s;

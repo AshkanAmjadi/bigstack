@@ -1,5 +1,5 @@
 <aside id="aside"
-       class="hide mini h-full fixed top-0 right-0 border-l border-slate-300 bg-slate-100 flex flex-col z-30 ">
+       class="hide mini h-full fixed top-0 right-0 border-l border-slate-300 DL-I flex flex-col z-30 ">
     <header class="h-20 flex w-full items-center px-4">
         <div id="sideCursor" class="cursor w-1/3 cursor-pointer pl-5" onclick="toggleAside(this)">
             <div class="h-5 w-5 float-left border-2 border-blue-500 rounded-full p-1">
