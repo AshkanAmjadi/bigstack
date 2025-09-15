@@ -207,10 +207,20 @@ class BaseQueryService
     }
     public function getPersionOfTable($table)
     {
-        $names = [
-            'article' => 'مقاله',
-            'project' => 'پروژه',
-        ];
+
+        $appLang = 'en';
+
+        if ($appLang === 'en') {
+            $names = [
+                'article' => 'Article',
+                'project' => 'Project',
+            ];
+        } elseif ($appLang === 'fa'){
+            $names = [
+                'article' => 'مقاله',
+                'project' => 'پروژه',
+            ];
+        }
 
         return $names[$table];
     }

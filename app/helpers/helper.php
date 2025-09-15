@@ -751,7 +751,9 @@ if (!function_exists('persianDate')){
     {
 
 
-        return verta($value)->timezone("Asia/Tehran")->format($format);
+        return \Carbon\Carbon::parse($value)
+            ->timezone('UTC')
+            ->format($format);
 
 
     }

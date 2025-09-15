@@ -1,7 +1,7 @@
 @php($user =auth()->user())
 @php($phone =$user->mainPhone()->first())
 @php(
-    $birth = $user && $user->year && $user->day && $user->month ? "$user->year/$user->month/$user->day" : ''
+    $birth = $user && $user->year && $user->day && $user->month ? "$user->year-$user->month-$user->day" : ''
     )
 
 @extends('user::userPanel.master')
@@ -9,6 +9,7 @@
 @section('cssScripts')
 
     @include('component.cdn.jalalicss')
+    @include('component.cdn.flatpickerCss')
 
     <link rel="stylesheet" href="{{asset('assets/css/cropper/cropper.css')}}"/>
     @parent
@@ -70,7 +71,7 @@
                             <h2 class="text-sm mr-4 font-semibold">birthday</h2>
                             <p class="text-sm font-bold text-red-600">(Required)</p>
                         </div>
-                        <input class="form-input2 text-smid w-full" dir="ltr" name="birth" type="date"
+                        <input class="form-input2 text-smid w-full" dir="ltr" name="birth" type="text"
                                value="{{$birth}}" placeholder="Ypure birthday"
 {{--                               data-jdp="" data-jdp-only-date="" for iranian date--}}
                         >
@@ -155,6 +156,14 @@
     @parent
 {{--    @include('component.cdn.jalali')--}}
 {{--    <script src="{{asset('assets/js/datepicker.js')}}"></script>--}}
+    @include('component.cdn.flatpicker')
+    <script>
+        let brth = document.querySelector('input[name="birth"]')
+
+        flatpickr(brth, {});
+    </script>
+
+
 
     @include('component.cdn.cleavejs')
     @include('component.cdn.cropper')

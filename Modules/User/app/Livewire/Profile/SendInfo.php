@@ -41,6 +41,7 @@ class SendInfo extends Component
 
         $unique_validation = Rule::unique('users')->ignore(auth()->id());
 
+
         $validate = Validator::make($data,[
             'name' => ['required','string','min:3','max:100',$unique_validation],
             'insta_id' => ['string','min:3','max:255',$unique_validation],
@@ -49,13 +50,14 @@ class SendInfo extends Component
 //            'melicode' => ['numeric','nullable','string',BaseValidation::validationForMelicode(),$unique_validation,'ir_national_id'],
             'birth' => [
                 'required',
+                Rule::date()->format('Y-m-d'),
 //                'persian_date',
-                function ($attribute, $value, $fail) {
-                    if (!preg_match("/^[0-9]{4}\/(|[0-1])[0-9]\/(|[0-3])[0-9]$/",$value))
-                    {
-                        $fail('date not valid');
-                    }
-                }
+//                function ($attribute, $value, $fail) {
+//                    if (!preg_match("/^[0-9]{4}\/(|[0-1])[0-9]\/(|[0-3])[0-9]$/",$value))
+//                    {
+//                        $fail('date not valid');
+//                    }
+//                }
             ],
             'gender' => [
                 'required',

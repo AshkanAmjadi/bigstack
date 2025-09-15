@@ -143,12 +143,12 @@
         <h2 class="font-semibold text-smid">
             👋 Hi dear {{auth()->user()->name ?: 'User'}} welcome.
         </h2>
-        @component('component.divider.hDivider',['class' => 'h-8 md:hidden'])
+{{--        @component('component.divider.hDivider',['class' => 'h-8 md:hidden'])--}}
 
-        @endcomponent
-        <h2 class="text-sm font-thin">
-            {{persianDate(now(),'l, %d  %B %Y')}}
-        </h2>
+{{--        @endcomponent--}}
+{{--        <h2 class="text-sm font-thin">--}}
+{{--            {{persianDate(now(),'l, %d  %B %Y')}}--}}
+{{--        </h2>--}}
     </div>
     <div class="">
         <div class="openMenu lg-r:hidden" onclick="openMenu()">
